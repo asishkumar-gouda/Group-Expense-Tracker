@@ -9,23 +9,48 @@
         android:roundIcon="@mipmap/mainlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">  <!--  Necessary because of the intent-filter below -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".TripSelection" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+        <!-- Add android:exported="false" if you want to be explicit or if other apps
+             with the same user ID should NOT be able to access it. -->
+
         <activity android:name=".GroupCreation" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".AddMembers" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".Home" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".Members" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".Add_Expenses" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".ExpensePieGraph" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".ModifyExpenses" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
         <activity android:name=".Calculate" />
-        <activity android:name=".TripDetail"></activity>
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
+        <activity android:name=".TripDetail" />
+        <!-- No intent-filter, defaults to exported="false" on Android 12+ -->
+
     </application>
 
 </manifest>
